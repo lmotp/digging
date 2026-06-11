@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import SampleInfoPanel from '@components/pages/sample/SampleInfoPanel.vue'
+
 const title = 'Sample page'
 const description = 'This page keeps its SCSS in app/assets/scss/pages/sample.scss through the @styles alias.'
 
@@ -14,12 +16,7 @@ useSeoMeta({
     <h1 class="sample-page__title">{{ title }}</h1>
     <p class="sample-page__description">{{ description }}</p>
 
-    <section class="sample-page__panel" aria-label="SCSS usage pattern">
-      <h2 class="sample-page__panel-title">Separated page style</h2>
-      <p class="sample-page__panel-text">
-        Page components can stay focused on template and setup logic while page-specific styles live in the Sass pages folder.
-      </p>
-    </section>
+    <SampleInfoPanel />
   </main>
 </template>
 

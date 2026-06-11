@@ -1,4 +1,8 @@
 <script setup lang="ts">
+import HomeComposableSample from '@components/pages/home/HomeComposableSample.vue'
+import HomeFeatureGrid from '@components/pages/home/HomeFeatureGrid.vue'
+import HomeHero from '@components/pages/home/HomeHero.vue'
+
 const { name, description, features } = useSiteMeta()
 
 useSeoMeta({
@@ -9,20 +13,11 @@ useSeoMeta({
 
 <template>
   <main>
-    <AppHero />
+    <HomeHero />
 
-    <section class="feature-grid" aria-label="Project folders">
-      <article
-        v-for="feature in features"
-        :key="feature.title"
-        class="feature-grid__item"
-      >
-        <h2 class="feature-grid__title">{{ feature.title }}</h2>
-        <p class="feature-grid__description">{{ feature.description }}</p>
-      </article>
-    </section>
+    <HomeFeatureGrid :features="features" />
 
-    <ComposableSetupSample />
+    <HomeComposableSample />
   </main>
 </template>
 

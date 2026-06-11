@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import type { NuxtError } from '#app'
+import ErrorState from '@components/pages/error/ErrorState.vue'
 
 const props = defineProps<{
   error: NuxtError

@@ -50,8 +50,10 @@ app/
     layouts/              # Layout-specific SCSS files
     pages/                # Page-specific SCSS files
   components/             # Reusable Vue components
+    pages/                # Page-owned components grouped by route
   composables/            # Typed reusable state and helpers
   layouts/                # Nuxt layout shells
+    components/           # Layout-owned components
   pages/                  # File-based Nuxt routes
 ```
 
