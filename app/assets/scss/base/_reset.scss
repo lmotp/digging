@@ -16,6 +16,11 @@ html {
 body {
   min-width: 320px;
   margin: 0;
+  background: linear-gradient(180deg, $color-background-soft 0, $color-background 22rem);
+  color: $color-text;
+  font-size: rem(16);
+  line-height: 1.5;
+  scrollbar-color: $color-border-light $color-background;
 }
 
 a {
@@ -27,6 +32,15 @@ input,
 textarea,
 select {
   font: inherit;
+}
+
+button {
+  border: 0;
+}
+
+::selection {
+  background: rgba($color-accent, 0.35);
+  color: $color-text;
 }
 
 button:focus-visible,

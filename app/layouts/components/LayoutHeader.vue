@@ -29,13 +29,28 @@ const { name, navItems } = useSiteMeta()
   align-items: center;
   justify-content: space-between;
   gap: rem(16);
-  padding: rem(20) 0;
+  padding: rem(20) 0 rem(12);
 
   &__brand {
+    display: inline-flex;
+    align-items: center;
+    min-height: rem(40);
+    border-radius: $radius-pill;
     color: $color-text;
     font-size: rem(16);
     font-weight: 800;
+    letter-spacing: 0;
     text-decoration: none;
+
+    &::before {
+      width: rem(12);
+      height: rem(12);
+      margin-right: rem(10);
+      border-radius: 50%;
+      background: $color-accent;
+      box-shadow: 0 0 0 rem(5) rgba($color-accent, 0.12);
+      content: "";
+    }
   }
 
   &__nav {
@@ -45,17 +60,32 @@ const { name, navItems } = useSiteMeta()
   }
 
   &__link {
-    border-radius: rem(8);
+    border-radius: $radius-pill;
     color: $color-muted;
     font-size: rem(14);
     font-weight: 700;
-    padding: rem(8) rem(12);
+    min-height: rem(40);
+    padding: rem(10) rem(16);
     text-decoration: none;
 
     &:hover,
     &.router-link-active {
-      background: rgba($color-accent, 0.08);
-      color: $color-accent-strong;
+      background: $color-surface;
+      color: $color-text;
+      box-shadow: $shadow-inset-border;
+    }
+  }
+}
+
+@media (max-width: 560px) {
+  .app-header {
+    align-items: flex-start;
+    flex-direction: column;
+
+    &__nav {
+      width: 100%;
+      overflow-x: auto;
+      padding-bottom: rem(2);
     }
   }
 }

@@ -36,5 +36,6 @@ const handleClearError = () => clearError({ redirect: '/' })
 .error-page {
   min-height: 100vh;
   background: $color-background;
+  color: $color-text;
 }
 </style>

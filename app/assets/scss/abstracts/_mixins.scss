@@ -7,6 +7,22 @@
 }
 
 @mixin focus-ring {
-  outline: rem(3) solid rgba($color-accent, 0.3);
+  outline: rem(2) solid $color-text;
   outline-offset: rem(3);
+}
+
+@mixin elevated-surface {
+  border: 0;
+  border-radius: $radius-card;
+  background: $color-background-soft;
+  box-shadow: $shadow-medium;
+}
+
+@mixin pill-control {
+  min-height: rem(44);
+  border-radius: $radius-pill;
+  font-size: rem(14);
+  font-weight: 700;
+  letter-spacing: rem(1.4);
+  text-transform: uppercase;
 }

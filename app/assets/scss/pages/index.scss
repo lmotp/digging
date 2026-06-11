@@ -3,27 +3,39 @@
 
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: rem(16);
-  padding: 0 0 rem(32);
+  gap: rem(14);
+  padding: 0 0 rem(28);
 
   &__item {
-    min-height: rem(180);
-    border: 1px solid $color-border;
-    border-radius: rem(8);
-    background: $color-surface;
+    @include elevated-surface;
+
+    min-height: rem(176);
     padding: rem(20);
+    transition:
+      background 180ms ease,
+      transform 180ms ease,
+      box-shadow 180ms ease;
+
+    &:hover {
+      background: $color-surface-hover;
+      box-shadow: $shadow-heavy;
+      transform: translateY(rem(-2));
+    }
   }
 
   &__title {
     margin: 0;
     color: $color-text;
     font-size: rem(18);
+    font-weight: 700;
+    line-height: 1.3;
   }
 
   &__description {
-    margin: rem(12) 0 0;
+    margin: rem(10) 0 0;
     color: $color-muted;
-    line-height: 1.6;
+    font-size: rem(14);
+    line-height: 1.54;
   }
 }
 

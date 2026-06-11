@@ -28,17 +28,19 @@ const sampleDirection: CounterDirection = 'up'
   gap: rem(16);
   align-items: center;
   margin-bottom: rem(80);
-  border: 1px solid $color-border;
-  border-radius: rem(8);
+  border-radius: $radius-card;
   background: $color-surface;
+  box-shadow: $shadow-inset-border;
   padding: rem(20);
 
   &__eyebrow,
   &__label {
     margin: 0;
     color: $color-muted;
-    font-size: rem(14);
+    font-size: rem(12);
     font-weight: 700;
+    letter-spacing: rem(1.4);
+    text-transform: uppercase;
   }
 
   &__content {
@@ -50,7 +52,7 @@ const sampleDirection: CounterDirection = 'up'
 
   &__count {
     margin: 0;
-    color: $color-text;
+    color: $color-accent;
     font-size: rem(40);
     font-weight: 800;
     line-height: 1;
@@ -65,17 +67,20 @@ const sampleDirection: CounterDirection = 'up'
     button {
       width: rem(44);
       height: rem(44);
-      border: 1px solid $color-border;
-      border-radius: rem(8);
-      background: $color-background;
+      border-radius: 50%;
+      background: $color-accent;
       color: $color-text;
       cursor: pointer;
       font-size: rem(22);
       font-weight: 800;
+      line-height: 1;
+      transition:
+        background 160ms ease,
+        transform 160ms ease;
 
       &:hover {
-        border-color: $color-accent;
-        color: $color-accent-strong;
+        background: $color-accent-strong;
+        transform: scale(1.04);
       }
     }
   }
