@@ -95,4 +95,13 @@ yarn preview
 bun run preview
 ```
 
+## GitHub Pages Deployment
+
+This project includes `.github/workflows/deploy-github-pages.yml`.
+
+The workflow runs on pushes to `main` or `master`, and can also be started manually from GitHub Actions.
+It typechecks the project, builds Nuxt with the `github_pages` preset, uploads `.output/public`, and deploys it through GitHub Pages.
+
+In GitHub repository settings, set **Pages > Build and deployment > Source** to **GitHub Actions**.
+
 Check out the [deployment documentation](https://nuxt.com/docs/getting-started/deployment) for more information.
