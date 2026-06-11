@@ -47,9 +47,11 @@ app/
   assets/scss/
     abstracts/            # Sass variables, mixins, functions
     base/                 # Global reset and base styles
+    layouts/              # Layout-specific SCSS files
     pages/                # Page-specific SCSS files
   components/             # Reusable Vue components
   composables/            # Typed reusable state and helpers
+  layouts/                # Nuxt layout shells
   pages/                  # File-based Nuxt routes
 ```
 
@@ -59,6 +61,7 @@ app/
 @styles      -> app/assets/scss
 @components  -> app/components
 @composables -> app/composables
+@layouts     -> app/layouts
 ```
 
 ## Production

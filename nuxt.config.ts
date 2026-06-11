@@ -7,7 +7,8 @@ export default defineNuxtConfig({
   alias: {
     '@styles': fileURLToPath(new URL('./app/assets/scss', import.meta.url)),
     '@components': fileURLToPath(new URL('./app/components', import.meta.url)),
-    '@composables': fileURLToPath(new URL('./app/composables', import.meta.url))
+    '@composables': fileURLToPath(new URL('./app/composables', import.meta.url)),
+    '@layouts': fileURLToPath(new URL('./app/layouts', import.meta.url))
   },
   css: ['~/assets/scss/main.scss'],
   typescript: {

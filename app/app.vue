@@ -1,13 +1,5 @@
 <template>
-  <div class="app-shell">
-    <NuxtRouteAnnouncer />
-    <AppHeader />
+  <NuxtLayout>
     <NuxtPage />
-  </div>
+  </NuxtLayout>
 </template>
-
-<style scoped lang="scss">
-.app-shell {
-  min-height: 100vh;
-}
-</style>
