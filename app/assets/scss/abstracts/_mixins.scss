@@ -1,0 +1,12 @@
+@use "functions" as *;
+@use "variables" as *;
+
+@mixin page-container {
+  width: min(1120px, calc(100% - #{rem(32)}));
+  margin-inline: auto;
+}
+
+@mixin focus-ring {
+  outline: rem(3) solid rgba($color-accent, 0.3);
+  outline-offset: rem(3);
+}
