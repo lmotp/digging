@@ -1,0 +1,49 @@
+.sample-page {
+  @include page-container;
+
+  padding: rem(72) 0 rem(96);
+
+  &__eyebrow {
+    margin: 0 0 rem(12);
+    color: $color-accent;
+    font-size: rem(14);
+    font-weight: 800;
+    text-transform: uppercase;
+  }
+
+  &__title {
+    max-width: rem(720);
+    margin: 0;
+    color: $color-text;
+    font-size: clamp(2.5rem, 8vw, 5rem);
+    line-height: 1;
+  }
+
+  &__description {
+    max-width: rem(640);
+    margin: rem(20) 0 0;
+    color: $color-muted;
+    font-size: rem(18);
+    line-height: 1.7;
+  }
+
+  &__panel {
+    margin-top: rem(32);
+    border: 1px solid $color-border;
+    border-radius: rem(8);
+    background: $color-surface;
+    padding: rem(24);
+  }
+
+  &__panel-title {
+    margin: 0;
+    color: $color-text;
+    font-size: rem(20);
+  }
+
+  &__panel-text {
+    margin: rem(12) 0 0;
+    color: $color-muted;
+    line-height: 1.7;
+  }
+}

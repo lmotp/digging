@@ -11,6 +11,7 @@ export interface SiteNavItem {
 export const useSiteMeta = () => {
   const navItems: SiteNavItem[] = [
     { label: 'Home', to: '/' },
+    { label: 'Sample', to: '/sample' },
     { label: '404', to: '/missing-page' }
   ]
 
